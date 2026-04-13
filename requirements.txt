@@ -4,7 +4,6 @@
 # Install with:
 #   pip install -r requirements.txt
 #
-# GPU requirement: CUDA >= 11.8, VRAM >= 16 GB
 # Tested on: NVIDIA A100, CUDA 13.0, Python 3.10
 
 # ── Core ML ───────────────────────────────────────────────────
