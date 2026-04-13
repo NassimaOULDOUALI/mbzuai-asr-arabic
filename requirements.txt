@@ -1,0 +1,40 @@
+# Arabic ASR Fine-Tuning — MBZUAI Technical Test
+# Nassima OULD OUALI — April 2026
+#
+# Install with:
+#   pip install -r requirements.txt
+#
+# GPU requirement: CUDA >= 11.8, VRAM >= 16 GB
+# Tested on: NVIDIA A100, CUDA 13.0, Python 3.10
+
+# ── Core ML ───────────────────────────────────────────────────
+torch>=2.0.0                  # Install separately from pytorch.org for your CUDA version
+transformers==4.45.2
+peft==0.18.1
+accelerate==1.13.0
+
+# ── Data ──────────────────────────────────────────────────────
+datasets==2.21.0              # Pinned — 2.21+ breaks soundfile backend on some servers
+soundfile
+librosa
+pyarrow>=12.0.0
+
+# ── Evaluation ────────────────────────────────────────────────
+jiwer                         # WER / CER computation
+
+# ── Experiment tracking ───────────────────────────────────────
+wandb
+
+# ── Notebook & visualisation ──────────────────────────────────
+jupyter
+notebook
+ipykernel
+matplotlib
+numpy<2                       # numpy 2.x breaks several transformers internals
+tqdm
+
+# ── Notes ─────────────────────────────────────────────────────
+# If torchcodec errors (missing libnppicc.so.13):
+#   pip uninstall torchcodec -y
+#   export DATASETS_AUDIO_BACKEND=soundfile
+# See Appendix A of the technical report for full workaround details.
