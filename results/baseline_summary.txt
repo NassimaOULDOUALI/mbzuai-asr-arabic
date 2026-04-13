@@ -1,0 +1,58 @@
+=================================================================
+  ARABIC ASR — ZERO-SHOT BASELINE EVALUATION SUMMARY
+=================================================================
+  Model        : openai/whisper-small
+  Dataset      : ./data/processed
+  Test samples : 500 (seed=42)
+  Timestamp    : 2026-04-11T15:10:49.487049
+
+  Condition                                  WER %    CER %
+  ----------------------------------------------------------
+  A — Whisper-small forced English (pathological)   99.34    99.18
+  B — Whisper-small zero-shot Arabic         42.60    15.59
+
+  Note: predictions normalised with normalize_arabic()
+  before WER/CER computation (same pipeline as 02_preprocess.py).
+=================================================================
+
+  ── Sample predictions  [A — Whisper-small forced English (pathological)]
+    REF  : في الوقت نفسه بدات الرماح والسهام تقع بين الغزاه
+    PRED :  At the time, the rime and the scents began to spread among the food.
+    NORM : 
+
+    REF  : ولد الكلب منذ شهرين
+    PRED :  Wally Dal Kalbomundu Shahrain
+    NORM : 
+
+    REF  : يتحدث بسرعه كبيره
+    PRED :  They talk in a loud voice.
+    NORM : 
+
+    REF  : امطرت بكثره هذا العام
+    PRED :  and it took a lot of time
+    NORM : 
+
+    REF  : هوايتها الوحيده هي جمع الطوابع
+    PRED :  The only thing that's left is the door.
+    NORM : 
+
+  ── Sample predictions  [B — Whisper-small zero-shot Arabic]
+    REF  : في الوقت نفسه بدات الرماح والسهام تقع بين الغزاه
+    PRED :  في الوقت نفسه بدأت الرماح وسهام تقع بين الغزاه
+    NORM : في الوقت نفسه بدات الرماح وسهام تقع بين الغزاه
+
+    REF  : ولد الكلب منذ شهرين
+    PRED :  ولي دلك البومون دو شهرين
+    NORM : ولي دلك البومون دو شهرين
+
+    REF  : يتحدث بسرعه كبيره
+    PRED :  يتحدث بسرعة كبيرة
+    NORM : يتحدث بسرعه كبيره
+
+    REF  : امطرت بكثره هذا العام
+    PRED :  ومطارت بكثرة هذا العام
+    NORM : ومطارت بكثره هذا العام
+
+    REF  : هوايتها الوحيده هي جمع الطوابع
+    PRED :  هوايتها الوحيدة هي جمع الطباب
+    NORM : هوايتها الوحيده هي جمع الطباب

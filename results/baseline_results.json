@@ -1,0 +1,240 @@
+{
+  "model": "openai/whisper-small",
+  "dataset": "./data/processed",
+  "eval_samples": 500,
+  "seed": 42,
+  "timestamp": "2026-04-11T15:10:49.487049",
+  "device": "cpu",
+  "conditions": [
+    {
+      "label": "A — Whisper-small forced English (pathological)",
+      "language": "english",
+      "metrics": {
+        "condition": "A — Whisper-small forced English (pathological)",
+        "n_samples": 500,
+        "wer": 99.34,
+        "cer": 99.18,
+        "wer_median_pct": 100.0,
+        "wer_p90_pct": 100.0
+      },
+      "examples": [
+        {
+          "reference": "في الوقت نفسه بدات الرماح والسهام تقع بين الغزاه",
+          "prediction_raw": " At the time, the rime and the scents began to spread among the food.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "ولد الكلب منذ شهرين",
+          "prediction_raw": " Wally Dal Kalbomundu Shahrain",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "يتحدث بسرعه كبيره",
+          "prediction_raw": " They talk in a loud voice.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "امطرت بكثره هذا العام",
+          "prediction_raw": " and it took a lot of time",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "هوايتها الوحيده هي جمع الطوابع",
+          "prediction_raw": " The only thing that's left is the door.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "لا اعرف ما مصدرها",
+          "prediction_raw": " I don't know what I'm looking for",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "استمر المطر اسبوعا",
+          "prediction_raw": " We continue the rain for a week.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "وصلنا الي المكتب في الوقت المطلوب",
+          "prediction_raw": " Wasam e-alaihi maqtam, il washtim matloh.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "كم مجله علي المكتب ؟",
+          "prediction_raw": " Then we look at the book.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "لربما جاءت غدا",
+          "prediction_raw": " Maybe tomorrow morning",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "من الافضل ان تذهب الان قبل ان تفوتك الحافله",
+          "prediction_raw": " It is better to go now before you get the job done.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "عاده ما يبتسم درايمن",
+          "prediction_raw": " I'll add the term Ibtasibh to the right one.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "هل تعرف اذا تتحدث الانغليزيه ؟",
+          "prediction_raw": " Let's see if you can speak English.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "احبه اكثر من بقيه الاولاد",
+          "prediction_raw": " I love him more than the rest of the kids.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "يصبح الجو ابرد يوما بعد يوم",
+          "prediction_raw": " It will be cold from day after day.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "كم الساعه ؟",
+          "prediction_raw": " Let me sound.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "الامر يعود اليك",
+          "prediction_raw": " Al Amruyayudu Ilyik.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "لا تتكلم هكذا",
+          "prediction_raw": " La te te kelem haqe da",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "كم عمرك ؟ سته عشر عاما",
+          "prediction_raw": " Come on, Murok. Sit down.",
+          "prediction_norm": ""
+        },
+        {
+          "reference": "في يدها شيء ما",
+          "prediction_raw": " Fiyadiha shay'unmo",
+          "prediction_norm": ""
+        }
+      ],
+      "elapsed_s": 1809.2
+    },
+    {
+      "label": "B — Whisper-small zero-shot Arabic",
+      "language": "arabic",
+      "metrics": {
+        "condition": "B — Whisper-small zero-shot Arabic",
+        "n_samples": 500,
+        "wer": 42.6,
+        "cer": 15.59,
+        "wer_median_pct": 40.0,
+        "wer_p90_pct": 100.0
+      },
+      "examples": [
+        {
+          "reference": "في الوقت نفسه بدات الرماح والسهام تقع بين الغزاه",
+          "prediction_raw": " في الوقت نفسه بدأت الرماح وسهام تقع بين الغزاه",
+          "prediction_norm": "في الوقت نفسه بدات الرماح وسهام تقع بين الغزاه"
+        },
+        {
+          "reference": "ولد الكلب منذ شهرين",
+          "prediction_raw": " ولي دلك البومون دو شهرين",
+          "prediction_norm": "ولي دلك البومون دو شهرين"
+        },
+        {
+          "reference": "يتحدث بسرعه كبيره",
+          "prediction_raw": " يتحدث بسرعة كبيرة",
+          "prediction_norm": "يتحدث بسرعه كبيره"
+        },
+        {
+          "reference": "امطرت بكثره هذا العام",
+          "prediction_raw": " ومطارت بكثرة هذا العام",
+          "prediction_norm": "ومطارت بكثره هذا العام"
+        },
+        {
+          "reference": "هوايتها الوحيده هي جمع الطوابع",
+          "prediction_raw": " هوايتها الوحيدة هي جمع الطباب",
+          "prediction_norm": "هوايتها الوحيده هي جمع الطباب"
+        },
+        {
+          "reference": "لا اعرف ما مصدرها",
+          "prediction_raw": " لا أعرف ما مصدرها",
+          "prediction_norm": "لا اعرف ما مصدرها"
+        },
+        {
+          "reference": "استمر المطر اسبوعا",
+          "prediction_raw": " استمر المطرى أسبوعا",
+          "prediction_norm": "استمر المطري اسبوعا"
+        },
+        {
+          "reference": "وصلنا الي المكتب في الوقت المطلوب",
+          "prediction_raw": " وصمعت للمقتم في الوقت المطلوب",
+          "prediction_norm": "وصمعت للمقتم في الوقت المطلوب"
+        },
+        {
+          "reference": "كم مجله علي المكتب ؟",
+          "prediction_raw": " كما جل على المكتب",
+          "prediction_norm": "كما جل علي المكتب"
+        },
+        {
+          "reference": "لربما جاءت غدا",
+          "prediction_raw": " لربما مجاءة غدا",
+          "prediction_norm": "لربما مجاءه غدا"
+        },
+        {
+          "reference": "من الافضل ان تذهب الان قبل ان تفوتك الحافله",
+          "prediction_raw": " من الأفضل أن تذهب الآن قبل أن تفوتك الحافلة",
+          "prediction_norm": "من الافضل ان تذهب الان قبل ان تفوتك الحافله"
+        },
+        {
+          "reference": "عاده ما يبتسم درايمن",
+          "prediction_raw": " عادة ما يبتسبه درائمون",
+          "prediction_norm": "عاده ما يبتسبه درايمون"
+        },
+        {
+          "reference": "هل تعرف اذا تتحدث الانغليزيه ؟",
+          "prediction_raw": " هل تعرفوا إذا تتحدثوا الإنجليزية؟",
+          "prediction_norm": "هل تعرفوا اذا تتحدثوا الانجليزيه؟"
+        },
+        {
+          "reference": "احبه اكثر من بقيه الاولاد",
+          "prediction_raw": " وحبه أكثر من بقيات الأولاد",
+          "prediction_norm": "وحبه اكثر من بقيات الاولاد"
+        },
+        {
+          "reference": "يصبح الجو ابرد يوما بعد يوم",
+          "prediction_raw": " يصبح الجو أبرد يوم من بعد يوم",
+          "prediction_norm": "يصبح الجو ابرد يوم من بعد يوم"
+        },
+        {
+          "reference": "كم الساعه ؟",
+          "prediction_raw": " هل يمكنني أن أعمل؟",
+          "prediction_norm": "هل يمكنني ان اعمل؟"
+        },
+        {
+          "reference": "الامر يعود اليك",
+          "prediction_raw": " ألأمرويا أودو إليك؟",
+          "prediction_norm": "الامرويا اودو اليك؟"
+        },
+        {
+          "reference": "لا تتكلم هكذا",
+          "prediction_raw": " لا تتكلمها كذلك",
+          "prediction_norm": "لا تتكلمها كذلك"
+        },
+        {
+          "reference": "كم عمرك ؟ سته عشر عاما",
+          "prediction_raw": " كم عمرك 16 عاماً",
+          "prediction_norm": "كم عمرك عاما"
+        },
+        {
+          "reference": "في يدها شيء ما",
+          "prediction_raw": " في يديها شيء أمو",
+          "prediction_norm": "في يديها شيء امو"
+        }
+      ],
+      "elapsed_s": 1305.5
+    }
+  ]
+}

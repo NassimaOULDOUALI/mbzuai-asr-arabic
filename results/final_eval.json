@@ -1,0 +1,439 @@
+{
+  "timestamp": "2026-04-11T23:38:30.309420",
+  "checkpoint": "./checkpoints/best",
+  "n_test_samples": 10471,
+  "metrics": [
+    {
+      "label": "Whisper-small + LoRA (fine-tuned)",
+      "n_samples": 10471,
+      "wer": 37.3887,
+      "cer": 12.1376,
+      "wer_median": 33.33,
+      "wer_p25": 16.67,
+      "wer_p75": 57.14,
+      "wer_p90": 80.0,
+      "perfect_pct": 20.06
+    },
+    {
+      "label": "Whisper-small zero-shot Arabic",
+      "n_samples": 10471,
+      "wer": 47.5544,
+      "cer": 21.1087,
+      "wer_median": 40.0,
+      "wer_p25": 20.0,
+      "wer_p75": 66.67,
+      "wer_p90": 100.0,
+      "perfect_pct": 16.88
+    }
+  ],
+  "elapsed": {
+    "finetuned_s": 619.7,
+    "zeroshot_s": 764.6
+  },
+  "qualitative": {
+    "best_predictions": [
+      {
+        "index": 2,
+        "reference": "الالمانيه ليست لغه سهله",
+        "finetuned_raw": "الالمانيه ليست لغه سهله",
+        "finetuned_norm": "الالمانيه ليست لغه سهله",
+        "zeroshot_raw": " الألمانية ليست لغة سهلة",
+        "zeroshot_norm": "الالمانيه ليست لغه سهله",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 3,
+        "reference": "طلبت منه ان يبعث الكتاب الينا",
+        "finetuned_raw": "طلبت منه ان يبعث الكتاب الينا",
+        "finetuned_norm": "طلبت منه ان يبعث الكتاب الينا",
+        "zeroshot_raw": " طلبت منه أن يبعث الكتاب إلينا",
+        "zeroshot_norm": "طلبت منه ان يبعث الكتاب الينا",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 5,
+        "reference": "الحمد لله",
+        "finetuned_raw": "الحمد لله",
+        "finetuned_norm": "الحمد لله",
+        "zeroshot_raw": " الحمد لله",
+        "zeroshot_norm": "الحمد لله",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 9,
+        "reference": "ولد الكلب منذ شهرين",
+        "finetuned_raw": "ولد الكلب منذ شهرين",
+        "finetuned_norm": "ولد الكلب منذ شهرين",
+        "zeroshot_raw": " ولي دلك البومون دو شهرين",
+        "zeroshot_norm": "ولي دلك البومون دو شهرين",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 17,
+        "reference": "كان من عادتها انها كانت تزورني باستمرار",
+        "finetuned_raw": "كان من عادتها انها كانت تزورني باستمرار",
+        "finetuned_norm": "كان من عادتها انها كانت تزورني باستمرار",
+        "zeroshot_raw": " كان من عدتها أنها كانت تزورني باستمرار",
+        "zeroshot_norm": "كان من عدتها انها كانت تزورني باستمرار",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 14.29
+      },
+      {
+        "index": 20,
+        "reference": "كلمني",
+        "finetuned_raw": "كلمني",
+        "finetuned_norm": "كلمني",
+        "zeroshot_raw": " كلمني",
+        "zeroshot_norm": "كلمني",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 25,
+        "reference": "اتحس بوجع في بطنك ؟",
+        "finetuned_raw": "اتحس بوجع في بطنك ؟",
+        "finetuned_norm": "اتحس بوجع في بطنك ؟",
+        "zeroshot_raw": " هل تشعر بوجع في بطنيكة؟",
+        "zeroshot_norm": "هل تشعر بوجع في بطنيكه؟",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 80.0
+      },
+      {
+        "index": 29,
+        "reference": "الابطال دايما يصلون متاخرين",
+        "finetuned_raw": "الابطال دايما يصلون متاخرين",
+        "finetuned_norm": "الابطال دايما يصلون متاخرين",
+        "zeroshot_raw": " الأبطال دائما يصلون متاخرين",
+        "zeroshot_norm": "الابطال دايما يصلون متاخرين",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 35,
+        "reference": "امطرت بكثره هذا العام",
+        "finetuned_raw": "امطرت بكثره هذا العام",
+        "finetuned_norm": "امطرت بكثره هذا العام",
+        "zeroshot_raw": " ومطارت بكثرة هذا العام",
+        "zeroshot_norm": "ومطارت بكثره هذا العام",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 25.0
+      },
+      {
+        "index": 36,
+        "reference": "ذهبت اليوم الي الطبيب",
+        "finetuned_raw": "ذهبت اليوم الي الطبيب",
+        "finetuned_norm": "ذهبت اليوم الي الطبيب",
+        "zeroshot_raw": " ذهبت اليوم إلى الطبيب",
+        "zeroshot_norm": "ذهبت اليوم الي الطبيب",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 46,
+        "reference": "عليك ان تتحكم بنزواتك",
+        "finetuned_raw": "عليك ان تتحكم بنزواتك",
+        "finetuned_norm": "عليك ان تتحكم بنزواتك",
+        "zeroshot_raw": " عليك أن تتحكم بين زواتك",
+        "zeroshot_norm": "عليك ان تتحكم بين زواتك",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 50.0
+      },
+      {
+        "index": 48,
+        "reference": "وصل الي لندن البارحه",
+        "finetuned_raw": "وصل الي لندن البارحه",
+        "finetuned_norm": "وصل الي لندن البارحه",
+        "zeroshot_raw": " وصل إلى لندن البارحة",
+        "zeroshot_norm": "وصل الي لندن البارحه",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 49,
+        "reference": "هذا دفتري",
+        "finetuned_raw": "هذا دفتري",
+        "finetuned_norm": "هذا دفتري",
+        "zeroshot_raw": " هذا دفتري",
+        "zeroshot_norm": "هذا دفتري",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 54,
+        "reference": "ليس من السهل تعلم لغه جديده بعد سن الخمسين",
+        "finetuned_raw": "ليس من السهل تعلم لغه جديده بعد سن الخمسين",
+        "finetuned_norm": "ليس من السهل تعلم لغه جديده بعد سن الخمسين",
+        "zeroshot_raw": " ليس من السهل تعلم لغات جديدة بعد سنة الخمسين",
+        "zeroshot_norm": "ليس من السهل تعلم لغات جديده بعد سنه الخمسين",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 22.22
+      },
+      {
+        "index": 58,
+        "reference": "لا اعرف ما مصدرها",
+        "finetuned_raw": "لا اعرف ما مصدرها",
+        "finetuned_norm": "لا اعرف ما مصدرها",
+        "zeroshot_raw": " لا أعرف ما مصدرها",
+        "zeroshot_norm": "لا اعرف ما مصدرها",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 67,
+        "reference": "سامحني من فضلك",
+        "finetuned_raw": "سامحني من فضلك",
+        "finetuned_norm": "سامحني من فضلك",
+        "zeroshot_raw": " سامحني من فنلك",
+        "zeroshot_norm": "سامحني من فنلك",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 33.33
+      },
+      {
+        "index": 68,
+        "reference": "طلبت منه المساعده",
+        "finetuned_raw": "طلبت منه المساعده",
+        "finetuned_norm": "طلبت منه المساعده",
+        "zeroshot_raw": " طلبت منه المساعدة",
+        "zeroshot_norm": "طلبت منه المساعده",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 75,
+        "reference": "لربما اصبح معلما ماهرا",
+        "finetuned_raw": "لربما اصبح معلما ماهرا",
+        "finetuned_norm": "لربما اصبح معلما ماهرا",
+        "zeroshot_raw": " لربما أصبح معلما ماهيرا",
+        "zeroshot_norm": "لربما اصبح معلما ماهيرا",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 25.0
+      },
+      {
+        "index": 81,
+        "reference": "اعجبت عمتي بنجاحي",
+        "finetuned_raw": "اعجبت عمتي بنجاحي",
+        "finetuned_norm": "اعجبت عمتي بنجاحي",
+        "zeroshot_raw": " أعجبت عمتي بنجاحي",
+        "zeroshot_norm": "اعجبت عمتي بنجاحي",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 83,
+        "reference": "اخذ الولد يبكي",
+        "finetuned_raw": "اخذ الولد يبكي",
+        "finetuned_norm": "اخذ الولد يبكي",
+        "zeroshot_raw": " أخذ الولد و يبكي",
+        "zeroshot_norm": "اخذ الولد و يبكي",
+        "sample_wer_ft": 0.0,
+        "sample_wer_zs": 33.33
+      }
+    ],
+    "worst_predictions": [
+      {
+        "index": 715,
+        "reference": "هل لديك سياره ؟",
+        "finetuned_raw": "قال لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي",
+        "finetuned_norm": "قال لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي لي",
+        "zeroshot_raw": " ألينا ندربنا بها؟ ألينا نتسجد يا رب؟",
+        "zeroshot_norm": "الينا ندربنا بها؟ الينا نتسجد يا رب؟",
+        "sample_wer_ft": 11075.0,
+        "sample_wer_zs": 175.0
+      },
+      {
+        "index": 430,
+        "reference": "قدماها طويلتان",
+        "finetuned_raw": "قد مه طويله عن",
+        "finetuned_norm": "قد مه طويله عن",
+        "zeroshot_raw": " قدمها طويلة",
+        "zeroshot_norm": "قدمها طويله",
+        "sample_wer_ft": 200.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 2125,
+        "reference": "نجحنا",
+        "finetuned_raw": "نجح ما",
+        "finetuned_norm": "نجح ما",
+        "zeroshot_raw": " نجحنا",
+        "zeroshot_norm": "نجحنا",
+        "sample_wer_ft": 200.0,
+        "sample_wer_zs": 0.0
+      },
+      {
+        "index": 877,
+        "reference": "ملات الكاس بالخمر",
+        "finetuned_raw": "ما لا تري الكاسب الخمل",
+        "finetuned_norm": "ما لا تري الكاسب الخمل",
+        "zeroshot_raw": " ملأت للكاس بالخمل",
+        "zeroshot_norm": "ملات للكاس بالخمل",
+        "sample_wer_ft": 166.67,
+        "sample_wer_zs": 66.67
+      },
+      {
+        "index": 8480,
+        "reference": "ماذا جري لفاضل",
+        "finetuned_raw": "ما ذا جرل فاضل ؟",
+        "finetuned_norm": "ما ذا جرل فاضل ؟",
+        "zeroshot_raw": " ماذا جرى لفادل؟",
+        "zeroshot_norm": "ماذا جري لفادل؟",
+        "sample_wer_ft": 166.67,
+        "sample_wer_zs": 33.33
+      },
+      {
+        "index": 717,
+        "reference": "لدي مغص",
+        "finetuned_raw": "ودي لي مرس",
+        "finetuned_norm": "ودي لي مرس",
+        "zeroshot_raw": " بدينا مقص",
+        "zeroshot_norm": "بدينا مقص",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 1315,
+        "reference": "احلاما سعيده",
+        "finetuned_raw": "احلي من سيدا",
+        "finetuned_norm": "احلي من سيدا",
+        "zeroshot_raw": " أحلام انساءدة",
+        "zeroshot_norm": "احلام انساءده",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 1324,
+        "reference": "يمكنني القفز",
+        "finetuned_raw": "يمكن من قص",
+        "finetuned_norm": "يمكن من قص",
+        "zeroshot_raw": " يوم في نين قص",
+        "zeroshot_norm": "يوم في نين قص",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 200.0
+      },
+      {
+        "index": 1703,
+        "reference": "بالكاد اسمعك",
+        "finetuned_raw": "في تكاد اسماءك",
+        "finetuned_norm": "في تكاد اسماءك",
+        "zeroshot_raw": " بيدي كاديا سمعوك",
+        "zeroshot_norm": "بيدي كاديا سمعوك",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 150.0
+      },
+      {
+        "index": 2319,
+        "reference": "تحقق حلمي",
+        "finetuned_raw": "تحق قاح حليب",
+        "finetuned_norm": "تحق قاح حليب",
+        "zeroshot_raw": " تحقق أحليب",
+        "zeroshot_norm": "تحقق احليب",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 50.0
+      },
+      {
+        "index": 2433,
+        "reference": "دمتريوس يشتمني",
+        "finetuned_raw": "دمت ريوس اشتمن",
+        "finetuned_norm": "دمت ريوس اشتمن",
+        "zeroshot_raw": " دميصريوس",
+        "zeroshot_norm": "دميصريوس",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 2624,
+        "reference": "عيناه زرقاوتان",
+        "finetuned_raw": "عناه زرقا وثان",
+        "finetuned_norm": "عناه زرقا وثان",
+        "zeroshot_raw": " عيناه زرقا وثان",
+        "zeroshot_norm": "عيناه زرقا وثان",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 2738,
+        "reference": "سررت بمعرفتك",
+        "finetuned_raw": "سررط بما عرفتك",
+        "finetuned_norm": "سررط بما عرفتك",
+        "zeroshot_raw": " سوريش طوبي ماري فتك",
+        "zeroshot_norm": "سوريش طوبي ماري فتك",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 200.0
+      },
+      {
+        "index": 2874,
+        "reference": "جلست بجانبي",
+        "finetuned_raw": "شلست في جانبه",
+        "finetuned_norm": "شلست في جانبه",
+        "zeroshot_raw": " شلس طبيجاني بي",
+        "zeroshot_norm": "شلس طبيجاني بي",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 150.0
+      },
+      {
+        "index": 3282,
+        "reference": "هيا لنلعب",
+        "finetuned_raw": "هي لنا العب",
+        "finetuned_norm": "هي لنا العب",
+        "zeroshot_raw": " هيا لنا العب",
+        "zeroshot_norm": "هيا لنا العب",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 3616,
+        "reference": "يحبان بعضهما",
+        "finetuned_raw": "يحباني بعضه ما",
+        "finetuned_norm": "يحباني بعضه ما",
+        "zeroshot_raw": " يحباني بعضهما",
+        "zeroshot_norm": "يحباني بعضهما",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 50.0
+      },
+      {
+        "index": 3897,
+        "reference": "جزاء وفاقا",
+        "finetuned_raw": "جزا او افاق",
+        "finetuned_norm": "جزا او افاق",
+        "zeroshot_raw": " جزاء أو وفاقة",
+        "zeroshot_norm": "جزاء او وفاقه",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 4689,
+        "reference": "فسنيسره لليسري",
+        "finetuned_raw": "فسلوا يسيروا لليساب",
+        "finetuned_norm": "فسلوا يسيروا لليساب",
+        "zeroshot_raw": " سألو يسيروا و أولي لكم سابقا",
+        "zeroshot_norm": "سالو يسيروا و اولي لكم سابقا",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 300.0
+      },
+      {
+        "index": 4790,
+        "reference": "فالحاملات وقرا",
+        "finetuned_raw": "فلح ملاه والقرا",
+        "finetuned_norm": "فلح ملاه والقرا",
+        "zeroshot_raw": " فلح ملاة وقرا",
+        "zeroshot_norm": "فلح ملاه وقرا",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 100.0
+      },
+      {
+        "index": 5147,
+        "reference": "وظف مناد",
+        "finetuned_raw": "والظف من نايد",
+        "finetuned_norm": "والظف من نايد",
+        "zeroshot_raw": " وليف من نت",
+        "zeroshot_norm": "وليف من نت",
+        "sample_wer_ft": 150.0,
+        "sample_wer_zs": 150.0
+      }
+    ]
+  }
+}
