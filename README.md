@@ -1,6 +1,6 @@
 # Arabic ASR Fine-Tuning — Whisper-small + LoRA
 
-**Nassima OULD OUALI** · April 2026 · MBZUAI — Institute of Foundation Models
+**Nassima OULD OUALI** · April 2026 · 
 
 ---
 
@@ -27,8 +27,7 @@ model      = model.merge_and_unload()
 ## Overview
 
 End-to-end fine-tuning of a lightweight Arabic ASR model under strict compute
-constraints (single GPU, ≤16 GB VRAM), as part of the MBZUAI Institute of
-Foundation Models technical test.
+constraints (single GPU, ≤16 GB VRAM).
 
 **Arabic was chosen deliberately** — Arabic ASR, and the challenge of building
 robust speech models across MSA and dialectal Arabic, is central to the lab's
@@ -56,7 +55,7 @@ knowledge for qualitative evaluation beyond automatic metrics.
 ## Repository Structure
 
 ```
-mbzuai-asr-arabic/
+asr-arabic-finetuning/
 ├── arabic_asr_finetuning.ipynb     # Complete pipeline notebook
 ├── requirements.txt                 # Full dependency stack
 ├── README.md                        # This file
@@ -179,15 +178,15 @@ Monotonic WER decrease across all 5 epochs — no overfitting observed.
 
 ```bash
 # 1. Clone and install
-git clone https://github.com/NassimaOULDOUALI/mbzuai-asr-arabic
-cd mbzuai-asr-arabic
+git clone https://github.com/NassimaOULDOUALI/asr-arabic-finetuning
+cd asr-arabic-finetuning
 pip install -r requirements.txt
 
 # 2. Run the pipeline
 python src/01_download.py
 python src/02_preprocess.py
 python src/03_evaluate_baselines.py
-export WANDB_PROJECT="mbzuai-asr-arabic"
+export WANDB_PROJECT="asr-arabic-finetuning"
 python src/04_train.py
 python src/05_evaluate_finetuned.py
 ```
@@ -199,7 +198,7 @@ python src/05_evaluate_finetuned.py
 > See Appendix A of the technical report for the full workaround.
 
 ### WandB training logs
-[https://wandb.ai/nassima-ouldouali-ecole-polytechnique/mbzuai-asr-arabic](https://wandb.ai/nassima-ouldouali-ecole-polytechnique/mbzuai-asr-arabic)
+[https://wandb.ai/nassima-ouldouali-ecole-polytechnique/asr-arabic-finetuning](https://wandb.ai/nassima-ouldouali-ecole-polytechnique/asr-arabic-finetuning)
 
 ---
 
